@@ -1,0 +1,83 @@
+body {
+    background-color: #EDE7F6; /* Very light lavender background */
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 20px;
+    color: #4A148C; /* A darker shade for visibility */
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    min-height: 200px; /* Adjust height as needed */    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  select {
+    background-color: white;
+    border: 2px solid #B39DDB; /* Lavender border */
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  label, p {
+    color: #4A148C; /* A darker shade for text to ensure visibility against light backgrounds */
+  }
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjusts spacing between buttons */
+  }
+  
+  /* Styling for each button to match the dropdown */
+  .button-group button {
+    background-color: white;
+    border: 2px solid #B39DDB; /* Lavender border to match the dropdown */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Padding to ensure size consistency */
+    width: 100%; /* Ensures buttons stretch to fill their container */
+    cursor: pointer;
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #4A148C; /* Text color */
+  }
+  
+  .button-group button:hover {
+    background-color: #EDE7F6; /* Light lavender background on hover for interaction feedback */
+  }
+  textarea {
+    width: 90%; /* Adjust the width to fit within the card */
+    height: 150px; /* Fixed height */
+    margin: 10px auto; /* Center the textarea horizontally */
+    display: block; /* Necessary for margin auto to work */
+    border: 2px solid #B39DDB; /* Lavender border */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #EDE7F6; /* Light lavender background */
+    resize: none; /* Disables resizing */
+  }
+  .submit-card button {
+    background-color: white;
+    color: #4A148C;
+    border: 2px solid #B39DDB;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: block; /* Center the button in the card */
+    margin: 20px auto; /* Adds margin to the top and bottom, and auto centers it horizontally */
+    cursor: pointer;
+    width:30%;
+  }
+  
+  .submit-card button:hover {
+    background-color: #EDE7F6; /* Light lavender background on hover */
+  }
