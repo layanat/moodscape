@@ -103,7 +103,7 @@ const Checkin = () => {
           <div className="button-group">
             <button onClick={() => handleConnection("Yes")}>Yes</button>
             <button onClick={() => handleConnection("Unsure")}> Unsure</button>
-            <button onClick={() => handleConnection("None")}>No</button>
+            <button onClick={() => handleConnection("No")}>No</button>
           </div>
           <p>Your answer: {connection}</p>
         </div>
