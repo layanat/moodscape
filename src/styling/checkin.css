@@ -7,7 +7,40 @@ body {
     margin-top: 20px;
     color: #4A148C; /* A darker shade for visibility */
   }
+  #emojiSelect {
+    font-size: 24px; /* Larger font size for emojis */
+    /* Additional styling */
+  }
+  .emoji-text {
+    font-size: 32px; /* Adjust the size as needed */
+  }
+  .selected-container, .options-container {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap within the container */
+    justify-content: start;
+    gap: 10px; /* Provides space between buttons */
+  }
   
+  .option-button, .selected-button {
+    background-color: white;
+    border: 2px solid #B39DDB;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .option-button:hover, .selected-button:hover {
+    background-color: #EDE7F6; /* Light lavender background on hover */
+  }
+  
+  .selected-button {
+    border-color: #6A0DAD /* Differentiate selected options */
+  }
   .card {
     background-color: white;
     border-radius: 15px;

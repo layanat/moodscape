@@ -9,7 +9,30 @@ const Checkin = () => {
   const [selfCareCompleted, setSelfCareCompleted] = useState(false);
   const [userInput, setUserInput] = useState("");
   const [savedInput, setSavedInput] = useState("");
-
+  const [options, setOptions] = useState([
+    "Frustrated",
+    "Anguished",
+    "Content",
+    "Sad",
+    "Happy",
+    "Excited",
+    "Nervous",
+    "Calm",
+    "Disappointed",
+    "Fearful",
+    "Optimistic",
+    "Curious",
+    "Relieved",
+    "Anxious",
+    "Indifferent",
+    "Angry",
+    "Confused",
+    "Peaceful",
+    "Zenned",
+    "Betrayed",
+    "Exhausted",
+  ]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
   const emojis = ["😊", "😔", "😡", "😁", "😭", "😕", "😴", "🥳", "🤯"]; // Your emoji list
 
   const handleChange = (event) => {
@@ -44,6 +67,15 @@ const Checkin = () => {
     alert(`Submitting Today's Entry. `);
     // Here you'd also handle other parts of the form, such as emoji and rest level
   };
+  const selectOption = (option) => {
+    setSelectedOptions([...selectedOptions, option]);
+    setOptions(options.filter((o) => o !== option));
+  };
+  const deselectOption = (option) => {
+    setOptions([...options, option]);
+    setSelectedOptions(selectedOptions.filter((o) => o !== option));
+  };
+
   return (
     <div>
       <h2 className="header">Check In with Yourself</h2>
@@ -67,7 +99,9 @@ const Checkin = () => {
           </select>
         </form>
 
-        <p>Selected Emoji: {selectedEmoji}</p>
+        <p>
+          Selected Emoji: <label className="emoji-text"> {selectedEmoji}</label>
+        </p>
       </div>
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="card">
@@ -147,7 +181,35 @@ const Checkin = () => {
           </div>
         )}
       </div>
-
+      <div className="card">
+        <p>What other emotions do you feel today</p>
+        <div className="selected-container">
+          {selectedOptions.length > 0 ? (
+            selectedOptions.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => deselectOption(option)}
+                className="selected-button"
+              >
+                {option}
+              </button>
+            ))
+          ) : (
+            <p>No options selected.</p>
+          )}
+        </div>
+        <div className="options-container">
+          {options.map((option, index) => (
+            <button
+              key={index}
+              onClick={() => selectOption(option)}
+              className="option-button"
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="card">
         <form onSubmit={handleSaveInput}>
           <p>
