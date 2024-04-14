@@ -68,6 +68,7 @@ const Stats = () => {
       <div className="cards-container">
         <div className="card-stats">
           <h3>Mood Stats for {month}</h3>
+          <br></br>
           <div className="month-navigation">
             <button onClick={() => changeMonth("prev")}>←</button>
             <span>{month}</span>
@@ -84,7 +85,7 @@ const Stats = () => {
           </div>
         </div>
         <div className="card-stats">
-          <h2>Emotion Stats Overview</h2>
+          <h3>Emotions Overview</h3> <br></br>
           <div className="emotion-stats">
             {Object.entries(emotions).map(([emotion, count], index) => (
               <button key={index} className="emotion-button">
