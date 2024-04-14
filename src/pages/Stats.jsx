@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
@@ -68,7 +67,7 @@ const Stats = () => {
       <h2 className="page-header">Your Stats</h2>
       <div className="cards-container">
         <div className="card-stats">
-          <h2>Mood Stats for {month}</h2>
+          <h3>Mood Stats for {month}</h3>
           <div className="month-navigation">
             <button onClick={() => changeMonth("prev")}>←</button>
             <span>{month}</span>
