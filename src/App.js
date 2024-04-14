@@ -1,25 +1,23 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Checkin from './pages/Checkin'; // Adjust the import path as necessary
-import LandingPage from './pages/LandingPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+import { NavBar } from "./navbar";
+import Checkin from './pages/Checkin';
 import Stats from './pages/Stats';
+import LandingPage from './pages/LandingPage';
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-      <Route path="/checkin"  element={<Checkin />} />
-      </Routes>
-      <Routes>
-        <Route path="/stats" element={<Stats />} />
-       
-      </Routes>
+    <Router>
+      <NavBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-       
+        <Route path="/checkin" element={<Checkin />} />
+        <Route path="/stats" element={<Stats />} />
       </Routes>
-      </BrowserRouter>
+    </Router>
   );
 }
 
-export default App; 
+export default App;
