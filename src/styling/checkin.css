@@ -100,17 +100,21 @@ body {
     resize: none; /* Disables resizing */
   }
   .submit-card button {
-    background-color: white;
-    color: #4A148C;
-    border: 2px solid #B39DDB;
-    border-radius: 10px;
     padding: 10px 20px;
-    display: block; /* Center the button in the card */
-    margin: 20px auto; /* Adds margin to the top and bottom, and auto centers it horizontally */
-    cursor: pointer;
-    width:30%;
+    background-color: #B39DDB;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    max-width: 30%;
+    border : none;
+   
+  }
+  .submit-card {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if you have more height to the container */
+    padding: 20px; /* Optional: adds padding inside the container */
   }
   
-  .submit-card button:hover {
-    background-color: #EDE7F6; /* Light lavender background on hover */
-  }
+  
+  
