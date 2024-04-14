@@ -8,7 +8,6 @@ const LandingPage = () => {
       <div className="background-container">
         <div className="card2-container">
           <div className="small-card">
-            <h2 className="landingpage">MoodScape</h2>
             <p className="lptext1">
               {" "}
               Enhance your emotional awareness with personalized journaling.

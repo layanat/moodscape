@@ -29,6 +29,7 @@ export const NavBar = () => {
             <Container fluid>
             <Navbar.Brand href="/" className="me-auto">
                 <img src={logo} alt="Moodscape Logo" style={{ width: '60px', height: '100%' }} />
+                 <span style={{ marginLeft: '10px', fontWeight: 'bold', fontSize: '24px', color: '#343865' }}>MoodScape</span>
             </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
