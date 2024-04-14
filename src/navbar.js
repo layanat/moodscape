@@ -34,20 +34,20 @@ export const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link 
-                            href="#checkin" 
+                            href="/checkin" 
                             className={`navbar-link ${activeLink === 'checkin' ? 'active' : ''}`} 
                             onClick={() => onUpdateActiveLink('checkin')}>
                             Check-In
                         </Nav.Link>
                         <Nav.Link 
-                            href="#stats" 
+                            href="/stats" 
                             className={`navbar-link ${activeLink === 'stats' ? 'active' : ''}`} 
                             onClick={() => onUpdateActiveLink('stats')}>
                             Your Stats
                         </Nav.Link>
 
                         <Nav.Link 
-                            href="#recap" 
+                            href="/recap" 
                             className={`navbar-link ${activeLink === 'recap' ? 'active' : ''}`} 
                             onClick={() => onUpdateActiveLink('recap')}>
                             Recap Your Moodscape Journey
