@@ -26,8 +26,8 @@ export const NavBar = () => {
 
     return (
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-            <Container>
-            <Navbar.Brand href="/">
+            <Container fluid>
+            <Navbar.Brand href="/" className="me-auto">
                 <img src={logo} alt="Moodscape Logo" style={{ width: '60px', height: '100%' }} />
             </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -36,18 +36,15 @@
     transform: rotate(360deg);
   }
 }
-
-.nav-link {  
-  margin-right: 20px; 
+.navbar-link {
+  margin-right: 20px; /* Adjust this value to increase or decrease spacing */
+  color: #333; /* Adjust link colors as needed */
 }
 
-.nav-link:last-child {
-  margin-right: 0; 
+.navbar-link:last-child {
+  margin-right: 0; /* Removes margin from the last item to maintain alignment */
 }
 
-
-
-
-
-
-
+.navbar-link.active {
+  color: #0056b3; /* Highlight color for active link */
+}
