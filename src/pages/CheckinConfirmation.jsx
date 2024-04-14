@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styling/CheckinConfirmation.css"; // Path to your CSS file for styling
+import "../styling/CheckinConfirmation.css"; // Path to your CSS file for styling
 
 const CheckinConfirmation = () => {
   return (
