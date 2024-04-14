@@ -27,7 +27,7 @@ const LandingPage = () => {
 
       <section className="about-us">
         <div className="about-us-content">
-          <h3 className="aboutush3"> About MoodScape</h3>
+          <h3 className="aboutush3"> Start Now</h3>
           <div className="line-div">
             <div className="green-line"></div>
           </div>
