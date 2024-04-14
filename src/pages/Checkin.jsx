@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../styling/checkin.css";
+import { useNavigate } from "react-router-dom";
+
 const Checkin = () => {
+  const navigate = useNavigate();
   const [selectedEmoji, setSelectedEmoji] = useState("");
   const [restLevel, setRestLevel] = useState("");
   const [activity, setActivity] = useState("");
@@ -64,7 +67,7 @@ const Checkin = () => {
     event.preventDefault();
     // Assuming you handle saving the user input and other actions here
     // For demonstration, we simply alert the saved input
-    alert(`Submitting Today's Entry. `);
+    navigate("/checkin-confirmation");
     // Here you'd also handle other parts of the form, such as emoji and rest level
   };
   const selectOption = (option) => {

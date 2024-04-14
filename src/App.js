@@ -6,6 +6,7 @@ import { NavBar } from "./navbar";
 import Checkin from './pages/Checkin';
 import Stats from './pages/Stats';
 import LandingPage from './pages/LandingPage';
+import CheckinConfirmation from './pages/CheckinConfirmation';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/checkin" element={<Checkin />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="/checkin-confirmation" element={<CheckinConfirmation />} />
       </Routes>
     </Router>
   );
