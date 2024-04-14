@@ -18,7 +18,18 @@
     color: white;
     margin: 20px;
   }
-  
+  .inner-container {
+    border: 2px solid black; /* Black border around the inner container */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the inner container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Adjust the width as necessary */
+   max-width: 800px; /* Ensures it does not get too wide */
+    /* Background color for visibility */
+  }
   .home-button {
     padding: 10px 20px;
     background-color: #B39DDB;
