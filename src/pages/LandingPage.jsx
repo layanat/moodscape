@@ -2,6 +2,10 @@ import React from "react";
 import "../styling/LandingPage.css";
 import { Link } from "react-router-dom";
 
+/**
+ * LandingPage component that serves as the home page for users.
+ * This component provides links to sign up and login, and introduces the main features of the application.
+ */
 const LandingPage = () => {
   return (
     <div>
