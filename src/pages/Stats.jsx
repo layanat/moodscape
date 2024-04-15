@@ -6,23 +6,26 @@ import "../styling/stats.css";
 const Stats = () => {
   const [month, setMonth] = useState("April");
   const emojiCounts = {
-    "😊": 10,
-    "😔": 3,
-    "😡": 2,
-    "🥳": 4,
+    "😊": 1,
+    "🤯": 2,
+    "😡": 1,
+    "😁": 3,
+    "🥳": 1,
   };
   const emotions = {
-    Happy: 12,
-    Sad: 5,
-    Excited: 7,
-    Frustrated: 3,
-    Content: 8,
-    Anguished: 2,
-    Curious: 6,
-    Nervous: 4,
-    Relieved: 9,
-    Anxious: 5,
-    Indifferent: 1,
+    Happy: 5,
+    Anxious: 3,
+    Optimistic: 2,
+    Calm: 2,
+    Excited: 2,
+    Peaceful: 1,
+    Zenned: 1,
+    Sad: 1,
+    Fearful: 1,
+    Content: 1,
+    Frustrated: 1,
+    Confused: 1,
+    Relieved: 1,
   };
 
   const data = {
