@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../styling/checkin.css";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Component to handle daily check-ins where users can record their feelings and activities.
+ */
 const Checkin = () => {
   const navigate = useNavigate();
   const [selectedEmoji, setSelectedEmoji] = useState("");
@@ -13,6 +16,7 @@ const Checkin = () => {
   const [userInput, setUserInput] = useState("");
   const [savedInput, setSavedInput] = useState("");
   const [options, setOptions] = useState([
+    // List of emotions or feelings a user can select from
     "Frustrated",
     "Anguished",
     "Content",
@@ -36,44 +40,112 @@ const Checkin = () => {
     "Exhausted",
   ]);
   const [selectedOptions, setSelectedOptions] = useState([]);
-  const emojis = ["😊", "😔", "😡", "😁", "😭", "😕", "😴", "🥳", "🤯"]; // Your emoji list
-
+  const emojis = ["😊", "😔", "😡", "😁", "😭", "😕", "😴", "🥳", "🤯"]; // Predefined list of emojis for selection
+  /**
+   * Updates the selected emoji state based on the user's selection.
+   * @param {Object} event - The event object from the select input change.
+   *
+   * This function sets the `selectedEmoji` state to the value selected by the user in the emoji dropdown menu.
+   */
   const handleChange = (event) => {
     setSelectedEmoji(event.target.value);
   };
+  /**
+   * Updates the rest level state based on the user's click on a specific button.
+   * @param {string} level - The rest level selected by the user.
+   *
+   * This function sets the `restLevel` state to the level passed to it when a user clicks one of the rest level buttons.
+   */
   const handleRestLevelClick = (level) => {
     setRestLevel(level);
   };
+  /**
+   * Updates the activity state based on the user's click on a specific button.
+   * @param {string} activity - The activity type selected by the user.
+   *
+   * This function sets the `activity` state to the activity passed to it when a user clicks one of the activity buttons.
+   */
   const handleActivityClick = (activity) => {
     setActivity(activity);
   };
+  /**
+   * Updates the connection state based on the user's click on a specific button.
+   * @param {string} connection - The connection option selected by the user.
+   *
+   * This function sets the `connection` state to the status passed to it when a user clicks one of the connection buttons.
+   */
   const handleConnection = (connection) => {
     setConnection(connection);
   };
+
+  /**
+   * Updates the stress level state based on the user's click on a specific button.
+   * @param {string} stress - The stress level selected by the user.
+   *
+   * This function sets the `stress` state to the level passed to it when a user clicks one of the stress level buttons.
+   */
   const handleStress = (stress) => {
     setStress(stress);
   };
+  /**
+   * Sets the self-care completion status to true when the user clicks the self-care button.
+   *
+   * This function is triggered when the "I Completed my self-care" button is clicked, marking the self-care activity as completed.
+   */
   const handleCompletedSelfCare = () => {
     setSelfCareCompleted(true);
   };
+  /**
+   * Updates the user input state based on what the user types into the textarea.
+   * @param {Object} event - The event object from the textarea input change.
+   *
+   * This function sets the `userInput` state to the current value of the textarea, reflecting what the user has typed.
+   */
   const handleUserInputChange = (event) => {
     setUserInput(event.target.value);
   };
+  /**
+   * Prevents form submission from reloading the page and saves the current user input into the savedInput state.
+   * @param {Object} event - The event object from the form submission.
+   *
+   * This function prevents the default form submission behavior and sets the `savedInput` state to the current `userInput` value.
+   */
   const handleSaveInput = (event) => {
     event.preventDefault();
-    setSavedInput(userInput); // Save the current input state
+    setSavedInput(userInput); // Saves the current input state on form submission
   };
+  /**
+   * Handles the submission of the entire form, saving user data and navigating to a confirmation page.
+   * @param {Object} event - The event object from the submit button click.
+   *
+   * This function prevents the default form submission behavior, potentially saves user input, and uses the `navigate` function to redirect the user to the check-in confirmation page.
+   */
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Assuming you handle saving the user input and other actions here
-    // For demonstration, we simply alert the saved input
-    navigate("/checkin-confirmation");
-    // Here you'd also handle other parts of the form, such as emoji and rest level
+    navigate("/checkin-confirmation"); // Redirects to confirmation page after submitting the form
   };
+  /**
+   * Handles the selection of an option from the available options list.
+   * @param {string} option - The option selected by the user.
+   *
+   * This function updates two state variables: `selectedOptions` and `options`.
+   * - `selectedOptions`: Adds the selected option to the array of already selected options.
+   * - `options`: Filters out the selected option from the array of available options,
+   *   effectively moving the option from available to selected status.
+   */
   const selectOption = (option) => {
     setSelectedOptions([...selectedOptions, option]);
     setOptions(options.filter((o) => o !== option));
   };
+  /**
+   * Handles the deselection of an option from the selected options list.
+   * @param {string} option - The option deselected by the user.
+   *
+   * This function updates two state variables: `selectedOptions` and `options`.
+   * - `options`: Adds the deselected option back to the array of available options.
+   * - `selectedOptions`: Filters out the deselected option from the array of currently selected options,
+   *   effectively moving the option from selected back to available status.
+   */
   const deselectOption = (option) => {
     setOptions([...options, option]);
     setSelectedOptions(selectedOptions.filter((o) => o !== option));
