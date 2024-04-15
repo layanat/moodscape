@@ -7,6 +7,7 @@ import Checkin from './pages/Checkin';
 import Stats from './pages/Stats';
 import LandingPage from './pages/LandingPage';
 import CheckinConfirmation from './pages/CheckinConfirmation';
+import Recap from './pages/Recap';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/checkin" element={<Checkin />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="/recap" element={<Recap />} />
         <Route path="/checkin-confirmation" element={<CheckinConfirmation />} />
       </Routes>
     </Router>

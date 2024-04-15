@@ -40,12 +40,14 @@ export const NavBar = () => {
                             onClick={() => onUpdateActiveLink('checkin')}>
                             Check-In
                         </Nav.Link>
+
                         <Nav.Link 
                             href="/stats" 
                             className={`navbar-link ${activeLink === 'stats' ? 'active' : ''}`} 
                             onClick={() => onUpdateActiveLink('stats')}>
                             Your Stats
                         </Nav.Link>
+
 
                         <Nav.Link 
                             href="/recap" 
