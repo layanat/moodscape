@@ -1,8 +1,14 @@
 import "../styling/recap.css";
 import React, { useState } from "react";
-
+/**
+ * Recap component displays a recap of daily entries made by a user, paginated to show a set number of entries per page.
+ */
 const Recap = () => {
+  // Static sample data for demonstration purposes
+
   const sampleData = [
+    // Array of objects, each representing a daily entry with various attributes
+
     {
       date: "Monday, April 15th, 2024",
       selectedEmoji: "😁",
@@ -92,20 +98,24 @@ const Recap = () => {
         "Today was Maryams birthday! I have been so excited for this ever since last week. I woke up thinking about the party later tonight. I started the day feeling happy and excited. I went to class and was pretty focused, knowing it will all pay off tonight. Later on when I was with friends, I felt amazing. I want to start hanging out with them more soon.",
     },
   ];
-
+  // State for the current page of the pagination
   const [currentPage, setCurrentPage] = useState(1);
+  // State for the number of entries per page
   const [entriesPerPage, setEntriesPerPage] = useState(3);
   // Set entries per page to 3
 
   // Calculate the indices for the current page entries
   const indexOfLastEntry = currentPage * entriesPerPage;
   const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
-  const currentEntries = sampleData.slice(indexOfFirstEntry, indexOfLastEntry);
+  const currentEntries = sampleData.slice(indexOfFirstEntry, indexOfLastEntry); // Current entries to be displayed on the page
 
-  // Change page function
+  /**
+   * Handles changing the current page.
+   * @param {number} pageNumber - The number of the page to navigate to.
+   */
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Calculate page numbers
+  // Calculate page numbers based on total data length and entries per page
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(sampleData.length / entriesPerPage); i++) {
     pageNumbers.push(i);
